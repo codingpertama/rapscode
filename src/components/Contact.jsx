@@ -122,9 +122,9 @@ export default function Contact() {
                 scrollTrigger: {
                     trigger: wrap,
                     start: "top top",
-                    end: "+=350%",
+                    end: "+=250%",
                     pin: sticky,
-                    scrub: 1.2,
+                    scrub: 0.5,
                     anticipatePin: 1,
                 }
             });
@@ -178,7 +178,7 @@ export default function Contact() {
     };
 
     return (
-        <div ref={wrapRef} style={{ height: "450svh", background: "#f9f9f7" }}>
+        <div ref={wrapRef} style={{ height: "250svh", background: "#f9f9f7" }}>
             <div
                 ref={stickyRef}
                 className="relative overflow-hidden flex flex-col"

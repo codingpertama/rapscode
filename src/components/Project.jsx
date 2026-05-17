@@ -335,9 +335,9 @@ export default function Project() {
                 scrollTrigger: {
                     trigger: wrap,
                     start: "top top",
-                    end: "+=420%",
+                    end: "+=250%",
                     pin: sticky,
-                    scrub: 1.2,
+                    scrub: 0.5,
                     anticipatePin: 1,
                 }
             });
@@ -372,7 +372,7 @@ export default function Project() {
     }, []);
 
     return (
-        <div ref={wrapRef} style={{ height: "520svh", background: "#f9f9f7" }}>
+        <div ref={wrapRef} style={{ height: "250svh", background: "#f9f9f7" }}>
             <div
                 ref={stickyRef}
                 className="relative overflow-hidden flex flex-col"

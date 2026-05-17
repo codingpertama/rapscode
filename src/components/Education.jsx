@@ -90,9 +90,9 @@ export default function Education() {
         scrollTrigger: {
           trigger: wrap,
           start: "top top",
-          end: "+=350%",
+          end: "+=250%",
           pin: sticky,
-          scrub: 1.2,
+          scrub: 0.5,
           anticipatePin: 1,
         }
       });
@@ -109,7 +109,7 @@ export default function Education() {
   }, []);
 
   return (
-    <div ref={wrapRef} style={{ height: "450svh", background: "#f9f9f7" }}>
+    <div ref={wrapRef} style={{ height: "250svh", background: "#f9f9f7" }}>
       <div ref={stickyRef} className="relative overflow-hidden flex flex-col justify-center" style={{ height: "100svh", background: "#f9f9f7", paddingLeft: "clamp(32px,8vw,120px)", paddingRight: "clamp(32px,4vw,60px)" }}>
 
         {/* Noise overlay */}

@@ -73,8 +73,8 @@ export default function AboutMe() {
 
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: wrap, start: "top top", end: "+=380%",
-          pin: sticky, scrub: 1.2, anticipatePin: 1,
+          trigger: wrap, start: "top top", end: "+=250%",
+          pin: sticky, scrub: 0.5, anticipatePin: 1,
         },
       });
 
@@ -119,7 +119,7 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div ref={wrapRef} style={{ height: "480svh", background: "#f9f9f7" }}>
+    <div ref={wrapRef} style={{ height: "250svh", background: "#f9f9f7" }}>
       <div ref={stickyRef} className="relative overflow-hidden"
         style={{ height: "100svh", background: "#f9f9f7" }}>
 

@@ -65,9 +65,9 @@ export default function Certificate() {
                 scrollTrigger: {
                     trigger: wrap,
                     start: "top top",
-                    end: "+=400%",
+                    end: "+=250%",
                     pin: sticky,
-                    scrub: 1.2,
+                    scrub: 0.5,
                     anticipatePin: 1,
                 }
             });
@@ -98,7 +98,7 @@ export default function Certificate() {
     }, []);
 
     return (
-        <div ref={wrapRef} style={{ height: "500svh", background: "#f9f9f7" }}>
+        <div ref={wrapRef} style={{ height: "250svh", background: "#f9f9f7" }}>
             <div ref={stickyRef} className="relative overflow-hidden flex flex-col" style={{ height: "100svh", background: "#f9f9f7", paddingTop: "10vh" }}>
 
                 {/* Noise overlay */}
