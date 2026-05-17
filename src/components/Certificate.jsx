@@ -64,12 +64,18 @@ export default function Certificate() {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: wrap,
-                    start: "top top",
-                    end: "+=250%",
-                    pin: sticky,
+                    start: "top 80%",
+                    end: "+=150%",
                     scrub: 0.5,
-                    anticipatePin: 1,
                 }
+            });
+
+            ScrollTrigger.create({
+                trigger: wrap,
+                start: "top top",
+                end: "+=150%",
+                pin: sticky,
+                anticipatePin: 1,
             });
 
             tl.to(".cert-bg", { scale: 1, opacity: 1, duration: 2, ease: "power3.out" }, 0);
@@ -98,7 +104,7 @@ export default function Certificate() {
     }, []);
 
     return (
-        <div ref={wrapRef} style={{ height: "250svh", background: "#f9f9f7" }}>
+        <div ref={wrapRef} style={{ height: "150svh", background: "#f9f9f7" }}>
             <div ref={stickyRef} className="relative overflow-hidden flex flex-col" style={{ height: "100svh", background: "#f9f9f7", paddingTop: "10vh" }}>
 
                 {/* Noise overlay */}

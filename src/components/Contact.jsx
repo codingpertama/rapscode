@@ -121,12 +121,18 @@ export default function Contact() {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: wrap,
-                    start: "top top",
-                    end: "+=250%",
-                    pin: sticky,
+                    start: "top 80%",
+                    end: "+=150%",
                     scrub: 0.5,
-                    anticipatePin: 1,
                 }
+            });
+
+            ScrollTrigger.create({
+                trigger: wrap,
+                start: "top top",
+                end: "+=150%",
+                pin: sticky,
+                anticipatePin: 1,
             });
 
             tl.to(".contact-bg", { scale: 1, opacity: 1, duration: 2, ease: "power3.out" }, 0);
@@ -178,7 +184,7 @@ export default function Contact() {
     };
 
     return (
-        <div ref={wrapRef} style={{ height: "250svh", background: "#f9f9f7" }}>
+        <div ref={wrapRef} style={{ height: "150svh", background: "#f9f9f7" }}>
             <div
                 ref={stickyRef}
                 className="relative overflow-hidden flex flex-col"

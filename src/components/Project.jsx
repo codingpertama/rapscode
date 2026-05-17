@@ -334,12 +334,18 @@ export default function Project() {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: wrap,
-                    start: "top top",
-                    end: "+=250%",
-                    pin: sticky,
+                    start: "top 80%",
+                    end: "+=150%",
                     scrub: 0.5,
-                    anticipatePin: 1,
                 }
+            });
+
+            ScrollTrigger.create({
+                trigger: wrap,
+                start: "top top",
+                end: "+=150%",
+                pin: sticky,
+                anticipatePin: 1,
             });
 
             // BG number
@@ -372,7 +378,7 @@ export default function Project() {
     }, []);
 
     return (
-        <div ref={wrapRef} style={{ height: "250svh", background: "#f9f9f7" }}>
+        <div ref={wrapRef} style={{ height: "150svh", background: "#f9f9f7" }}>
             <div
                 ref={stickyRef}
                 className="relative overflow-hidden flex flex-col"

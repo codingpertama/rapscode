@@ -73,9 +73,19 @@ export default function AboutMe() {
 
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: wrap, start: "top top", end: "+=250%",
-          pin: sticky, scrub: 0.5, anticipatePin: 1,
+          trigger: wrap, 
+          start: "top 80%", 
+          end: "+=150%",
+          scrub: 0.5,
         },
+      });
+
+      ScrollTrigger.create({
+        trigger: wrap,
+        start: "top top",
+        end: "+=150%",
+        pin: sticky,
+        anticipatePin: 1,
       });
 
       // Foto
@@ -119,7 +129,7 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div ref={wrapRef} style={{ height: "250svh", background: "#f9f9f7" }}>
+    <div ref={wrapRef} style={{ height: "150svh", background: "#f9f9f7" }}>
       <div ref={stickyRef} className="relative overflow-hidden"
         style={{ height: "100svh", background: "#f9f9f7" }}>
 
